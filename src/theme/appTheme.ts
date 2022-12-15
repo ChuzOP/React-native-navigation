@@ -39,4 +39,22 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
     justifyContent: 'space-around',
   },
+  avatarContainer: {
+    backgroundColor: '#f6f6f6',
+    alignItems: 'center',
+    paddingTop: 15,
+  },
+  avatar: {
+    width: 150,
+    height: 150,
+  },
+  navContainer: {
+    marginHorizontal: 20,
+    marginVertical: 15,
+  },
+  nav: {marginVertical: 5},
+  navText: {
+    color: 'black',
+    fontSize: 20,
+  },
 });
