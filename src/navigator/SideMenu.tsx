@@ -11,9 +11,10 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import Article from '../screens/Article';
-import {StackNavigator} from './StackNavigator';
 import {styles} from '../theme/appTheme';
+import Settings from '../screens/Settings';
+import {BottomTabNavigator} from './BottomTabNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -27,11 +28,11 @@ export const SideMenu = () => {
         // headerShown: false, // Oculta la hamburguesa
       }}>
       <Drawer.Screen
-        name="StackNavigator"
+        name="BottomTabNavigator"
         options={{title: 'Home'}}
-        component={StackNavigator}
+        component={BottomTabNavigator}
       />
-      <Drawer.Screen name="Article" component={Article} />
+      <Drawer.Screen name="Setting" component={Settings} />
     </Drawer.Navigator>
   );
 };
@@ -50,13 +51,19 @@ const MenuContent = ({navigation}: DrawerContentComponentProps) => {
       <View style={styles.navContainer}>
         <TouchableOpacity
           style={styles.nav}
-          onPress={() => navigation.navigate('StackNavigator')}>
+          onPress={() => navigation.navigate('BottomTabNavigator')}>
+          <Text>
+            <Icon name="home-outline" size={25} color="#000" />;
+          </Text>
           <Text style={styles.navText}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.nav}
-          onPress={() => navigation.navigate('Article')}>
-          <Text style={styles.navText}>Article</Text>
+          onPress={() => navigation.navigate('Setting')}>
+          <Text>
+            <Icon name="settings-outline" size={25} color="#000" />;
+          </Text>
+          <Text style={styles.navText}>Settings</Text>
         </TouchableOpacity>
       </View>
     </DrawerContentScrollView>

@@ -1,5 +1,13 @@
 import {StyleSheet} from 'react-native';
 
+export const colors = {
+  pirmary: '#4B56D2',
+  secondary: '#D09CFA',
+  alert: '#E0144C',
+  succes: '#54B435',
+  fiumba: '#000000',
+};
+
 export const styles = StyleSheet.create({
   contentContainer: {
     margin: 15,
@@ -52,7 +60,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginVertical: 15,
   },
-  nav: {marginVertical: 5},
+  nav: {marginVertical: 5, flexDirection: 'row', justifyContent: 'space-between', width: 100},
   navText: {
     color: 'black',
     fontSize: 20,
